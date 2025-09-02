@@ -8,7 +8,7 @@ def last_digit(number):
         return -(abs(number) % 10)
     else:
         return number % 10
-    
+
 
 if last_digit(number) > 5:
     print(
