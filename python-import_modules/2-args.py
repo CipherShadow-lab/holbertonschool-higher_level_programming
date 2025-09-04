@@ -3,7 +3,7 @@ import sys
 
 if __name__ == "__main__":
 
-    args = sys.argv[1:] # excludes progam/script name
+    args = sys.argv[1:]  # excludes progam/script name
     count = len(args)
 
     if count == 0:
@@ -13,5 +13,5 @@ if __name__ == "__main__":
     else:
         print("{} arguments:".format(count))
 
-    for i, arg in enumerate(args, start=1): 
+    for i, arg in enumerate(args, start=1):
         print("{}: {}".format(i, arg))
