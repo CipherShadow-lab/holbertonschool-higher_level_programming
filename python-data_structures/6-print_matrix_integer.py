@@ -2,7 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     for sublist in matrix:
         for i in range(len(sublist)):
-            print(sublist[i], end="")
+            print("{:d}".format(sublist[i]), end="")
             if i < len(sublist) - 1:
                 print(" ", end="")
         print()
