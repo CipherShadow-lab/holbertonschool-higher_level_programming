@@ -58,7 +58,7 @@ Infinity divisor:
 Traceback (most recent call last):
 TypeError: div must be a number
 
-NaN divisor:
+NaN (Not a Number) divisor:
 >>> matrix_divided([[1, 2], [3, 4]], float('nan'))
 Traceback (most recent call last):
 TypeError: div must be a number
