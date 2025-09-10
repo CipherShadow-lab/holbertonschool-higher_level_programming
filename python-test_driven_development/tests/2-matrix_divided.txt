@@ -53,6 +53,16 @@ Zero division:
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
 
+Infinity divisor:
+>>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+Traceback (most recent call last):
+TypeError: div must be a number
+
+NaN divisor:
+>>> matrix_divided([[1, 2], [3, 4]], float('nan'))
+Traceback (most recent call last):
+TypeError: div must be a number
+
 Non-numeric div:
 >>> matrix_divided([[1, 2], [3, 4]], "hello")
 Traceback (most recent call last):

@@ -44,6 +44,10 @@ def matrix_divided(matrix, div):
     # Check that div is a number
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
+    
+    # Check for NaN or infinity
+    if div != div or div in (float('inf'), float('-inf')):
+        raise TypeError("div must be a number")
 
     # Check that div is not zero
     if div == 0:
