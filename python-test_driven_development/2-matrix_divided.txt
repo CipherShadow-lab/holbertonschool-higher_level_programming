@@ -4,8 +4,16 @@ Doctests for matrix_divided
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-Basic usage with integers:
->>> matrix = [[1, 2, 3], [4, 5, 6]]
+Basic example from main file
+============================
+
+Given this matrix:
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+
+Dividing every element by 3:
 >>> matrix_divided(matrix, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
@@ -13,48 +21,39 @@ Matrix remains unchanged:
 >>> matrix
 [[1, 2, 3], [4, 5, 6]]
 
+===========================
+Tests and Edge Cases
+===========================
+
 Matrix with floats:
 >>> matrix_divided([[1.5, 2.5], [3.5, 4.5]], 2)
 [[0.75, 1.25], [1.75, 2.25]]
 
-Using negative divisor:
->>> matrix_divided([[1, -2], [-3, 4]], -2)
-[[-0.5, 1.0], [1.5, -2.0]]
+Negative divisor:
+>>> matrix_divided([[1, -2], [3, -4]], -2)
+[[-0.5, 1.0], [-1.5, 2.0]]
 
-Default rounding:
->>> matrix_divided([[2, 5]], 3)
-[[0.67, 1.67]]
-
-===========================
-Error Handling
-===========================
-
-Non-list matrix:
->>> matrix_divided("not a matrix", 2)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-Non-list row:
->>> matrix_divided([1, 2, 3], 2)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-Matrix with a non-number element:
->>> matrix_divided([[1, 2], [3, "four"]], 2)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-Rows of different sizes:
->>> matrix_divided([[1, 2, 3], [4, 5]], 2)
+Mismatched row sizes:
+>>> matrix_divided([[1, 2], [3]], 2)
 Traceback (most recent call last):
 TypeError: Each row of the matrix must have the same size
 
-Non-numeric divisor:
->>> matrix_divided([[1, 2], [3, 4]], "2")
+Invalid element in matrix:
+>>> matrix_divided([[1, "2"], [3, 4]], 2)
 Traceback (most recent call last):
-TypeError: div must be a number
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Non-list matrix input:
+>>> matrix_divided("not a matrix", 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Zero division:
 >>> matrix_divided([[1, 2], [3, 4]], 0)
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
+
+Non-numeric div:
+>>> matrix_divided([[1, 2], [3, 4]], "hello")
+Traceback (most recent call last):
+TypeError: div must be a number
