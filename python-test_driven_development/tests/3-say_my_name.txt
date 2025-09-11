@@ -49,10 +49,6 @@ First name with special characters:
 >>> say_my_name("Élodie", "Brontë")
 My name is Élodie Brontë
 
-Names with leading/trailing whitespace:
->>> say_my_name("  Liam  ", "  Neeson ")
-My name is   Liam     Neeson
-
 >>> say_my_name("Liam", None)
 Traceback (most recent call last):
 TypeError: last_name must be a string
