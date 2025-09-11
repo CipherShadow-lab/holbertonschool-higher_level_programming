@@ -11,7 +11,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
+
     i = 0
     length = len(text)
 
