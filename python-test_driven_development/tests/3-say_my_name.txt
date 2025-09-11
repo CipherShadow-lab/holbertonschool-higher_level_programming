@@ -51,7 +51,7 @@ My name is Élodie Brontë
 
 Names with leading/trailing whitespace:
 >>> say_my_name("  Liam  ", "  Neeson ")
-My name is   Liam    Neeson 
+My name is   Liam     Neeson
 
 >>> say_my_name("Liam", None)
 Traceback (most recent call last):
