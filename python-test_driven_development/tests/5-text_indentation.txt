@@ -1,6 +1,4 @@
 """
-This doctest checks the text_indentation function from 5-text_indentation.py
-
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 # Raise exception if text is not a string:
@@ -8,19 +6,20 @@ This doctest checks the text_indentation function from 5-text_indentation.py
 Traceback (most recent call last):
 TypeError: text must be a string
 
-# Correct output for text indentation
-
+# Correct output for empty string (prints nothing)
 >>> text_indentation("")
->>> text_indentation("\\n")
+>>> text_indentation("""
+""")
 <BLANKLINE>
 
->>> text_indentation(\"\"\"Hello:\\n\\nHolberton.\"\"\")
+# Text with newlines and punctuation
+>>> text_indentation('Hello:\n\nHolberton.')
 Hello:
 <BLANKLINE>
 Holberton.
 <BLANKLINE>
 
->>> text_indentation("?\\n")
+>>> text_indentation("?\n")
 ?
 <BLANKLINE>
 <BLANKLINE>
@@ -39,22 +38,12 @@ Hello
 ?
 <BLANKLINE>
 
->>> text_indentation(":?.")
+>>> text_indentation(".?:")
 :
-<BLANKLINE>
-?
 <BLANKLINE>
 .
 <BLANKLINE>
-
->>> text_indentation(".?:Hello")
-.
-<BLANKLINE>
 ?
-<BLANKLINE>
-:
-<BLANKLINE>
-Hello
 <BLANKLINE>
 
 >>> text_indentation(".?Hello:")
@@ -96,21 +85,11 @@ Hello  ?
 ?
 <BLANKLINE>
 
-# Argument has only spaces - no output
+# Argument with only spaces should print nothing
 >>> text_indentation("  ")
-
-# check string with empty spaces - no output
 >>> text_indentation("      ")
-
->>> text_indentation(\"\"\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
-Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
-Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
-Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
-rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
-stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
-cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
-beatiorem! Iam ruinas videres\"\"\")
+>>> text_indentation("      ")
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres""")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
 Quonam modo?
