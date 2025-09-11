@@ -31,10 +31,10 @@ TypeError: last_name must be a string
 Additional Tests and Edge Cases
 ===========================
 
->>> say_my_name("")
+>>> say_my_name("", "")
 My name is  
 
->>> say_my_name("Charlie")
+>>> say_my_name("Charlie", "")
 My name is Charlie 
 
 >>> say_my_name("Dana", "")
