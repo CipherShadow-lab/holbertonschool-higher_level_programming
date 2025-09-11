@@ -6,20 +6,19 @@
 Traceback (most recent call last):
 TypeError: text must be a string
 
-# Correct output for empty string (prints nothing)
+# Empty string and newline
 >>> text_indentation("")
->>> text_indentation("""
-""")
+>>> text_indentation("\\n")
 <BLANKLINE>
 
 # Text with newlines and punctuation
->>> text_indentation('Hello:\n\nHolberton.')
+>>> text_indentation("Hello:\\n\\nHolberton.")
 Hello:
 <BLANKLINE>
 Holberton.
 <BLANKLINE>
 
->>> text_indentation("?\n")
+>>> text_indentation("?\\n")
 ?
 <BLANKLINE>
 <BLANKLINE>
@@ -80,16 +79,17 @@ Hi?
 Hello  ?
 <BLANKLINE>
 
-# Multiple leading and trailing spaces
+# Leading and trailing spaces removed
 >>> text_indentation("   ?    ")
 ?
 <BLANKLINE>
 
-# Argument with only spaces should print nothing
+# Arguments with only spaces produce no output
 >>> text_indentation("  ")
 >>> text_indentation("      ")
->>> text_indentation("      ")
->>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres""")
+
+# Long paragraph test
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
 Quonam modo?
