@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""This module defines a function that prints a formatted full name.
+
+The function say_my_name takes a first and optional last name, validates
+the inputs, and prints a sentence introducing the person.
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """
     Prints "My name is <first name> <last name>"
