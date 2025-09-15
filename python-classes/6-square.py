@@ -9,21 +9,24 @@ class Square:
     This class defines a square by its size.
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """
-        Initialises the square with a specific size.
+        Initialises the square with a specific size and position.
         The size is a private attribute.
         Args:
             size (int): The size of the square. Defaults to 0.
+            position (tuple): The position of the square.
         Raises:
-            TypeError: If size is not an integer.
+            TypeError: If size is not an integer or position
+            is not a tuple of 2 positive integers.
             ValueError: If size is less than 0.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -57,7 +60,7 @@ class Square:
         Returns:
             tuple: The position of the square
         """
-        return self._position
+        return self.__position
 
     @position.setter
     def position(self, value):
