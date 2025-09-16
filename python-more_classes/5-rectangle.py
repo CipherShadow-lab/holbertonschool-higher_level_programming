@@ -68,4 +68,5 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        return f"Bye rectangle..."
+        """Method deletes an instance of a rectangle"""
+        print("Bye rectangle...")
