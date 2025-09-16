@@ -61,7 +61,7 @@ class Rectangle:
                 rectangle += (self.width * "#" + '\n')
             rectangle += (self.width * "#")
             return rectangle
-   
+
     def __repr__(self):
         """Method to return a receateable instance"""
 
