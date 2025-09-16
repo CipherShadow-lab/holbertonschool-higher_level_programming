@@ -53,7 +53,7 @@ class Rectangle:
             return ((self.width * 2) + (self.height * 2))
 
     def __str__(self):
-        """Sets printbehaviour of Rectangle object"""
+        """Sets print behaviour of Rectangle object"""
         rectangle = ""
 
         if self.width > 0 and self.height > 0:
