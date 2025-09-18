@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""Defines classes for a singly linked list."""
 
 class Node:
+    """Class defines a node of a singly linked list."""
     def __init__(self, data, next_node=None):
         self.__data = data
         self.__next_node = next_node
@@ -28,6 +30,13 @@ class Node:
         self.__next_node = value
 
 class SinglyLinkedList:
+    """
+    Defines a SinglyLInkedList class.
+    This class supportes inserting vlaues in sorted ascending order,
+    and provides a string representation of a list, one number per line.
+    """
+
+
     def __init__(self):
         self.__head = None
 
