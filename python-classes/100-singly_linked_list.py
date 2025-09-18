@@ -47,18 +47,14 @@ class SinglyLinkedList:
         and make the print() work
         """
 
-
         node = self.__head
         values = []
 
         while node is not None:
             values.append(str(node.data))
             node = node.next_node
-        
 
-        return "\n".join(values)
-    
-
+        return "\n".join(values)    
 
     def sorted_insert(self, value):
         """Method inserts a new Node into a singly linked list"""
