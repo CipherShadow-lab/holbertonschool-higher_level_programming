@@ -100,7 +100,7 @@ class Square:
             print(" " * self.__position[0] + "#" * self.__size)
 
     def __str__(self):
-        """Supports print(sqaure) by returning string represention of object."""
+        """Supports print(sqaure)."""
         if self.__size == 0:
             return ""
         result = [""] * self.__position[1]
