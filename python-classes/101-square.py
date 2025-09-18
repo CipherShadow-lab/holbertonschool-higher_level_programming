@@ -103,8 +103,8 @@ class Square:
         """Supports print(sqaure) by returning string represention of object."""
         if self.__size == 0:
             return ""
-        result = ["\n" * self.__position[1]]
+        result = [""] * self.__position[1]
         for _ in range(self.__size):
             line = " " * self.__position[0] + "#" * self.__size
             result.append(line)
-        return "\n".join(result).lstrip("\n")
+        return "\n".join(result)
