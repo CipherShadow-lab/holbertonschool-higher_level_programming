@@ -1,0 +1,26 @@
+=====================
+TESTS FOR 1-my_list.py
+======================
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(-50)
+>>> my_list.append(50)
+>>> my_list.append(0)
+>>> print(my_list)
+[-50, 50, 0]
+
+>>> my_list.print_sorted()
+[-50, 0, 50]
+
+>>> my_list = MyList()
+>>> my_list.append(500000000)
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[0, 500000000]
+
+>>> print(my_list)
+[500000000, 0]
+
+>>> my_empty_list = MyList()
+>>> my_empty_list.print_sorted()
+[]
