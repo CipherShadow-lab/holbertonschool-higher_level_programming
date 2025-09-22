@@ -3,9 +3,6 @@
 Contains a class Rectangle that inherits
 the BaseGeometry class.
 """
-from multiprocessing.heap import Arena
-
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
