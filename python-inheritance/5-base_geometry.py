@@ -5,5 +5,5 @@ Contains an emply class called BaseGeometry
 
 
 class BaseGeometry():
-    """Checks if an object is an instance of an inherited class."""
+    """Empty class called BaseGeometry."""
     pass
