@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Rectangle Module.
 Contains a class Rectangle that inherits
-from BaseGeometry.
+the BaseGeometry class.
 """
 
 
@@ -19,7 +19,7 @@ class BaseGeometry():
             raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
-    """Defines the Rectangle class that inherets from BaseGeometry"""
+    """Defines the Rectangle class that inherets BaseGeometry class."""
 
     def __init__(self, width, height):
         self.integer_validator("width", width)
