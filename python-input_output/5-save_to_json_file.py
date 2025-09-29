@@ -9,6 +9,5 @@ import json
 def save_to_json_file(my_obj, filename):
     """function serializes Python object to JSON-formatted string"""
 
-
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(my_obj, f)
