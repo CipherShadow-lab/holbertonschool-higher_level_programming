@@ -18,7 +18,9 @@ def serialize_to_xml(dictionary, filename):
     tree = ET.ElementTree(root)
     tree.write(filename, encoding="utf-8", xml_declaration=True)
 
-def deserialization_from_xml(filename):
+def deserialize_from_xml(filename):
+    """Deserialize XML to Python dictionary with basic type conversion."""
+
     tree = ET.parse(filename)
     root = tree.getroot()
 
