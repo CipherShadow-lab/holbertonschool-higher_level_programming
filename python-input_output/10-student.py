@@ -16,7 +16,7 @@ class Student:
 
         if (
             isinstance(attrs, list)
-            and all(isinstance(attrs, str) for attr in attrs)
+            and all(isinstance(attr, str) for attr in attrs)
         ):
             result = {}
             for key in attrs:
