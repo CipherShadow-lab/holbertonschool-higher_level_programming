@@ -6,17 +6,25 @@ import xml.etree.ElementTree as ET
 
 
 def serialize_to_xml(dictionary, filename):
-    """Method takes Python dictionary and filename parameters and
-    serializes dictionary into XML."""
+    """
+    Method takes Python dictionary and filename parameters and
+    serializes dictionary into XML.
+    """
 
 
-    root = ET.Element("data")
-    for key, value in dictionary.items():
-        child = ET.SubElement(root, key)
-        child.text = str(value)  # converts value to string for XML text
+    try:
+        root = ET.Element("data")
 
-    tree = ET.ElementTree(root)
-    tree.write(filename, encoding="utf-8", xml_declaration=True)
+        for key, value in dictionary.items():
+            child = ET.SubElement(root, key)
+            child.text = str(value)  # converts value to string for XML text
+
+            tree = ET.ElementTree(root)
+            tree.write(filename, encoding='utf-8', xml_declaration=True)
+
+            return True
+    except Exception:
+        return False
 
 def deserialize_from_xml(filename):
     """Deserialize XML to Python dictionary with basic type conversion."""
