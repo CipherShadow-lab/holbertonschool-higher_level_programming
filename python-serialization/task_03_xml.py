@@ -19,37 +19,40 @@ def serialize_to_xml(dictionary, filename):
             child = ET.SubElement(root, key)
             child.text = str(value)  # converts value to string for XML text
 
-            tree = ET.ElementTree(root)
-            tree.write(filename, encoding='utf-8', xml_declaration=True)
+        tree = ET.ElementTree(root)
+        tree.write(filename, encoding='utf-8', xml_declaration=True)
 
-            return True
+        return True
     except Exception:
         return False
 
 def deserialize_from_xml(filename):
     """Deserialize XML to Python dictionary with basic type conversion."""
 
-    tree = ET.parse(filename)
-    root = tree.getroot()
+    try:
+        tree = ET.parse(filename)
+        root = tree.getroot()
 
-    result = {}
-    for child in root:
-        key = child.tag
-        value = child.text
+        result = {}
+        for child in root:
+            key = child.tag
+            value = child.text
 
-        if value == "True":
-            value = True
-        elif value == "False":
-            value = False
-        else:
-            try:
-                if '.' in value:
-                    value = float(value)
-                else:
-                    value = int(value)
-            except (ValueError, TypeError):
-                pass
+            if value == "True":
+                value = True
+            elif value == "False":
+                value = False
+            else:
+                try:
+                    if '.' in value:
+                        value = float(value)
+                    else:
+                        value = int(value)
+                except (ValueError, TypeError):
+                    pass
 
-        result[key] = value
+            result[key] = value
 
-    return result
+        return result
+    except Exception:
+        return None
