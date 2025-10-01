@@ -2,7 +2,6 @@
 """Module serializes and deserializes with XML."""
 
 
-from os import lseek
 import xml.etree.ElementTree as ET
 
 
