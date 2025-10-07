@@ -35,3 +35,5 @@ def fetch_and_save_posts():
 
         for post in filtered_posts:
             writer.writerow(post)
+        else:
+            print(f"Status Code: {response.status_code}")
