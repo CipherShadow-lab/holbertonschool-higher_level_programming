@@ -18,7 +18,7 @@ def data():
 
 @app.route("/status")
 def status():
-    return jsonify({"status": "OK"})
+    return jsonify("OK")
 
 @app.route("/users/<username>")
 def get_user(username):
@@ -46,7 +46,7 @@ def add_user():
     }
 
     return jsonify({
-        "messge": "User added successfully",
+        "message": "User added successfully",
         "user": users[username]
     }), 201
 
