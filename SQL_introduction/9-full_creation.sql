@@ -1,7 +1,7 @@
 -- Creates table 'second_table' in database 'htbn_0c_0'
 -- and adds multiple rows with values
 CREATE TABLE IF NOT EXISTS second_table (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT,
     name VARCHAR(256),
     score INT
 );
