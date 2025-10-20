@@ -3,8 +3,7 @@
 -- 'name' column is VARCHAR(256) and can't be NULL
 -- If database and table already exists, script will not fail
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
-DROP TABLE IF EXISTS usa;
-CREATE TABLE usa (
+CREATE TABLE IF NOT EXISTS states (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(256) NOT NULL
 );
