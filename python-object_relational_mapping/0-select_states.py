@@ -1,10 +1,10 @@
-#!/usr/bin/python3
+/usr/bin/python3
 """ Script lists all states from database 'hbtn_0e_0_usa' """
 
 import MySQLdb
 from sys import argv
 
-if __name__=="__main__":
+if __name__ == "__main__":
     """ Get states from the database """
     db = MySQLdb.connect(
             host="localhost",
@@ -23,4 +23,3 @@ if __name__=="__main__":
     # Clean up
     cur.close()
     db.close()
-
