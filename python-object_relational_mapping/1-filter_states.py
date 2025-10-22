@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-""" Script lists all states with a name starting with N """
+"""Script lists all states with a name starting with 'N' from database"""
 
 import MySQLdb
 from sys import argv
 
-if __name == "__main__":
-    """ Get all states staring with 'N' """
+if __name__ == "__main__":
     conn = MySQLdb.connect(
             host="localhost",
             port=3306,
