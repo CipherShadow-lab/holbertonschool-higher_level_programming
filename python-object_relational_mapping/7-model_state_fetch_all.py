@@ -8,7 +8,7 @@ from model_state import Base, State
 from sys import argv
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     """Access to database to get 'states' from database"""
 
 engine = create_engine(
