@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 """
-Script deletes all 'States' objects containing the letter 'a'
-from database 'hbtn_0e_6_usa'.
+Script prints all City objects from database 'hbtn_0e_6_usa'.
 """
 
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
-from mode_city import City
+from model_city import City
 from sys import argv
 
 
 if __name__ == "__main__":
-    """Access to database to delete State objects with 'a'"""
+    """Access to database to print all City objects"""
 
     engine = create_engine(
             'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
