@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+"""
+Defines a City class that maps to the 'cities' table
+in database hbtn_0e_14_usa.
+"""
+
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+# Create base class
+Base = declarative_base()
+
+
+class City(Base):
+    """City class that maps to the 'cities' table in MySQL."""
+
+    __tablename__ = 'cities'
+
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    name = Column(String(128), nullable=False)
