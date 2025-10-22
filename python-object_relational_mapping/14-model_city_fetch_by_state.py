@@ -23,10 +23,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states_del = session.query(State).filter(State.name.like('%a%')).all()
+    cities = session.query(City, State).join(State).order_by(City.id).all()
 
-    for state in states_del:
-        session.delete(state)
+    for city, state in cities:
+        print(f"{state.name}: ({city.id}) {city.name}")
 
-    session.commit()
     session.close()
