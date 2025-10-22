@@ -4,7 +4,7 @@ Defines a City class that maps to the 'cities' table
 in database hbtn_0e_14_usa.
 """
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 # Create base class
