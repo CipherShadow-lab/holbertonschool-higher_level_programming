@@ -2,7 +2,7 @@
 """
 Script displays all values in 'states' table
 of database 'hbtn_0e_0_usa' where 'name'
-matches the supplied argument. 
+matches the supplied argument.
 This time safe from SQL injections!
 """
 
