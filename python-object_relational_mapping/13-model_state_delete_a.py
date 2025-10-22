@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Script deletes all 'States' objects containing the letter 'a' from database 'hbtn_0e_6_usa'."""
+"""
+Script deletes all 'States' objects containing the letter 'a'
+from database 'hbtn_0e_6_usa'.
+"""
 
 
 from sqlalchemy import create_engine
