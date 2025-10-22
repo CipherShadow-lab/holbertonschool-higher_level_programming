@@ -4,7 +4,8 @@
 import MySQLdb
 from sys import argv
 
-if __name == "__main__";
+if __name == "__main__":
+    """ Get all states staring with 'N' """
     conn = MySQLdb.connect(
             host="localhost",
             port=3306,
